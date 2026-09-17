@@ -1,10 +1,13 @@
-{ fuzzel, makeWrapper, symlinkJoin }:
+{
+  fuzzel,
+  makeWrapper,
+  symlinkJoin,
+}:
 symlinkJoin {
   name = "fuzzel-wrapped";
   paths = [ fuzzel ];
   nativeBuildInputs = [ makeWrapper ];
-  postBuild =
-  ''
+  postBuild = ''
     wrapProgram $out/bin/fuzzel \
       --add-flags "--config=${./fuzzel.ini}"
   '';

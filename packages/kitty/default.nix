@@ -1,10 +1,13 @@
-{ kitty, makeWrapper, symlinkJoin }:
+{
+  kitty,
+  makeWrapper,
+  symlinkJoin,
+}:
 symlinkJoin {
   name = "kitty-wrapped";
   paths = [ kitty ];
   nativeBuildInputs = [ makeWrapper ];
-  postBuild =
-  ''
+  postBuild = ''
     wrapProgram $out/bin/kitty \
       --add-flags "--config=${./kitty.conf}"
   '';

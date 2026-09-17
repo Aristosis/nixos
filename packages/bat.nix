@@ -1,4 +1,8 @@
-{ bat, makeWrapper, symlinkJoin }:
+{
+  bat,
+  makeWrapper,
+  symlinkJoin,
+}:
 symlinkJoin {
   name = "bat-wrapped";
   paths = [ bat ];

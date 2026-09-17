@@ -1,5 +1,5 @@
 {
-  pkgs
+  pkgs,
 }:
 {
   fzf-wrapped = pkgs.callPackage ./fzf.nix { };

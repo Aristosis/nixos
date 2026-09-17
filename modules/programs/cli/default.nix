@@ -1,4 +1,9 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  localPkgs,
+  ...
+}:
+{
   imports = [
     ./zsh.nix
     ./direnv.nix
@@ -6,6 +11,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    tmux
     btop
     fzf
     duf

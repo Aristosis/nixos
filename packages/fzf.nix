@@ -1,4 +1,8 @@
-{ fzf, makeWrapper, symlinkJoin }:
+{
+  fzf,
+  makeWrapper,
+  symlinkJoin,
+}:
 symlinkJoin {
   name = "fzf-wrapped";
   paths = [ fzf ];

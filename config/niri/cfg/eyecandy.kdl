@@ -8,16 +8,21 @@ layout {
   }
 
   border {
-    active-color   "#ffffff"
-    inactive-color "#aaaaaa"
+    on
+    active-color   "#b2b2b2"
+    inactive-color "#000000"
     urgent-color   "#ffb4ab"
     width 1
-    on
   }
 
   tab-indicator {
-    active-color   "#ffffff"
-    inactive-color "#aaaaaa"
+    place-within-column
+    length total-proportion=1.0
+    width 6
+    gap 0
+    position       "top"
+    active-color   "#b2b2b2"
+    inactive-color "#000000"
     urgent-color   "#ffb4ab"
   }
 
@@ -33,12 +38,12 @@ animations {
   off
   slowdown 0.7
   window-open {
-      duration-ms 100
-      curve "ease-out-expo"
-    }
+    duration-ms 100
+    curve "ease-out-expo"
+  }
   window-close {
-      duration-ms 100
-      curve "ease-out-quad"
+    duration-ms 100
+    curve "ease-out-quad"
   }
 }
 
