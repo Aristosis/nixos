@@ -16,6 +16,7 @@
     fzf
     duf
     p7zip
+    unrar-wrapper
     lsd
     tree-sitter
     bat
