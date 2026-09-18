@@ -13,8 +13,8 @@
   environment.systemPackages = with pkgs; [
     tmux
     btop
-    fzf
     duf
+    localPkgs.fzf-wrapped
     p7zip
     unrar-wrapper
     lsd
