@@ -3,6 +3,8 @@
 input {
   keyboard {
     numlock
+    repeat-rate 30
+    repeat-delay 300
   }
 
   touchpad {
