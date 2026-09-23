@@ -6,6 +6,11 @@ window-rule {
   }
 }
 
+cursor {
+  xcursor-size 24
+  xcursor-theme "Bibata-Modern-Ice"
+}
+
 layout {
   gaps 0
 
