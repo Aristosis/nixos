@@ -24,8 +24,17 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/5924289e-b862-4090-9060-ff8fee3e1104";
-    fsType = "ext4";
+    device = "/dev/disk/by-label/NIXROOT";
+    fsType = "xfs";
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-label/NIXBOOT";
+    fsType = "vfat";
+    options = [
+      "fmask=0077"
+      "dmask=0077"
+    ];
   };
 
   fileSystems."/home/ari/media/hdd" = {
@@ -33,14 +42,6 @@
     fsType = "ext4";
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/A700-FC2A";
-    fsType = "vfat";
-    options = [
-      "fmask=0077"
-      "dmask=0077"
-    ];
-  };
 
   swapDevices = [ ];
 
