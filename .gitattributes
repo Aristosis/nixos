@@ -1,1 +1,3 @@
-config/emojis linguist-detectable=false
+packages/fuzzel-character-picker/emojis linguist-detectable=false
+packages/fuzzel-character-picker/nf-icons linguist-detectable=false
+packages/fuzzel-character-picker/unicode-characters linguist-detectable=false

@@ -5,7 +5,9 @@ binds {
   MOD+RETURN                          repeat=false hotkey-overlay-title="App Launcher: Fuzzel" repeat=false { spawn "fuzzel"; }
   MOD+B                               repeat=false hotkey-overlay-title="Browser: Librewolf" repeat=false { spawn "librewolf"; }
   MOD+V                               repeat=false hotkey-overlay-title="Clipboard: Fuzzel" repeat=false { spawn-sh "cliphist-fuzzel-img"; }
-  MOD+PERIOD                          repeat=false hotkey-overlay-title="Emoji Picker: Fuzzel" repeat=false { spawn-sh "fuzzel-emojis"; }
+  MOD+PERIOD                          repeat=false hotkey-overlay-title="Pick emojis: Fuzzel" repeat=false { spawn-sh "fuzzel-character-picker emoji"; }
+  MOD+COMMA                           repeat=false hotkey-overlay-title="Pick nerd font icons: Fuzzel" repeat=false { spawn-sh "fuzzel-character-picker nerd-icons"; }
+  MOD+SLASH                           repeat=false hotkey-overlay-title="Pick unicode symbols: Fuzzel" repeat=false { spawn-sh "fuzzel-character-picker unicode"; }
   MOD+SHIFT+Q                         repeat=false { close-window; }
 
   XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_SINK@ 5%+"; }

@@ -1,7 +1,6 @@
 {
   pkgs,
   localPkgs,
-  inputs,
   ...
 }:
 {
@@ -11,25 +10,11 @@
   };
 
   hjem.users.ari.packages = with pkgs; [
-    (writeShellApplication {
-      name = "fuzzel-emojis";
-      runtimeInputs = with pkgs; [
-        localPkgs.fuzzel-wrapped
-        coreutils
-        wtype
-      ];
-      text = ''
-        emojis=$(cat ${inputs.self}/config/emojis)
-        selected=$(echo "$emojis" | fuzzel -d -l 20)
-        if [ -n "$selected" ]; then
-          wtype "$(echo "$selected" | cut -d ' ' -f1)"
-        fi
-      '';
-    })
+    localPkgs.fuzzel-character-picker
     localPkgs.kitty-wrapped
+    localPkgs.fuzzel-wrapped
     mako
     awww
-    localPkgs.fuzzel-wrapped
     wl-clipboard
     cliphist
     xwayland-satellite
