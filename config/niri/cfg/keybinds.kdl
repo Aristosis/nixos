@@ -1,13 +1,12 @@
 binds {
-  // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
-
   MOD+SHIFT+ESCAPE                    { show-hotkey-overlay; }
 
-  MOD+SHIFT+RETURN                    hotkey-overlay-title="Terminal: Kitty" { spawn-sh "kitty -1"; }
-  MOD+RETURN                          hotkey-overlay-title="App Launcher: Fuzzel" repeat=false { spawn "fuzzel"; }
-  MOD+B                               hotkey-overlay-title="Browser: Librewolf" repeat=false { spawn "librewolf"; }
-  MOD+V                               hotkey-overlay-title="Clipboard: Fuzzel" repeat=false { spawn-sh "cliphist-fuzzel-img"; }
-  MOD+PERIOD                          hotkey-overlay-title="Emoji Picker: Fuzzel" repeat=false { spawn-sh "fuzzel-emojis"; }
+  MOD+SHIFT+RETURN                    repeat=false hotkey-overlay-title="Terminal: Kitty" { spawn-sh "kitty -1"; }
+  MOD+RETURN                          repeat=false hotkey-overlay-title="App Launcher: Fuzzel" repeat=false { spawn "fuzzel"; }
+  MOD+B                               repeat=false hotkey-overlay-title="Browser: Librewolf" repeat=false { spawn "librewolf"; }
+  MOD+V                               repeat=false hotkey-overlay-title="Clipboard: Fuzzel" repeat=false { spawn-sh "cliphist-fuzzel-img"; }
+  MOD+PERIOD                          repeat=false hotkey-overlay-title="Emoji Picker: Fuzzel" repeat=false { spawn-sh "fuzzel-emojis"; }
+  MOD+SHIFT+Q                         repeat=false { close-window; }
 
   XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_SINK@ 5%+"; }
   XF86AUDIOLOWERVOLUME                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_SINK@ 5%-"; }
@@ -16,20 +15,11 @@ binds {
   XF86MONBRIGHTNESSUP                 allow-when-locked=true { spawn-sh "brightnessctl set +5"; }
   XF86MONBRIGHTNESSDOWN               allow-when-locked=true { spawn-sh "brightnessctl set -5"; }
 
-
-  MOD+LEFT                            { focus-column-left; }
-  MOD+RIGHT                           { focus-column-right; }
-  MOD+UP                              { focus-window-up; }
-  MOD+DOWN                            { focus-window-down; }
   MOD+H                               { focus-column-left; }
   MOD+L                               { focus-column-right; }
   MOD+K                               { focus-window-up; }
   MOD+J                               { focus-window-down; }
 
-  MOD+CTRL+LEFT                       { move-column-left; }
-  MOD+CTRL+RIGHT                      { move-column-right; }
-  MOD+CTRL+UP                         { move-window-up; }
-  MOD+CTRL+DOWN                       { move-window-down; }
   MOD+CTRL+H                          { move-column-left; }
   MOD+CTRL+L                          { move-column-right; }
   MOD+CTRL+K                          { move-window-up; }
@@ -43,19 +33,9 @@ binds {
   MOD+CTRL+HOME                       { move-column-to-first; }
   MOD+CTRL+END                        { move-column-to-last; }
 
-  MOD+SHIFT+LEFT                      { focus-monitor-left; }
-  MOD+SHIFT+RIGHT                     { focus-monitor-right; }
-  MOD+SHIFT+UP                        { focus-monitor-up; }
-  MOD+SHIFT+DOWN                      { focus-monitor-down; }
-
   MOD+SPACE                           { switch-focus-between-floating-and-tiling; }
+  MOD+SHIFT+SPACE                     { toggle-window-floating; }
 
-  MOD+SHIFT+CTRL+LEFT                 { move-column-to-monitor-left; }
-  MOD+SHIFT+CTRL+RIGHT                { move-column-to-monitor-right; }
-  MOD+SHIFT+CTRL+UP                   { move-column-to-monitor-up; }
-  MOD+SHIFT+CTRL+DOWN                 { move-column-to-monitor-down; }
-
-  // ─── Workspace Switching ───
   MOD+WHEELSCROLLDOWN                 cooldown-ms=150 { focus-workspace-down; }
   MOD+WHEELSCROLLUP                   cooldown-ms=150 { focus-workspace-up; }
   MOD+CTRL+WHEELSCROLLDOWN            cooldown-ms=150 { move-column-to-workspace-down; }
@@ -102,13 +82,11 @@ binds {
   MOD+EQUAL                           { set-column-width "+10%"; }
   MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
   MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
-  MOD+SHIFT+Q                         repeat=false { close-window; }
 
-  MOD+T                               { toggle-window-floating; }
   MOD+CTRL+F                          { fullscreen-window; }
   MOD+W                               { toggle-column-tabbed-display; }
 
-  Print                               { screenshot; }
+  CTRL+F12                            { screenshot; }
 
   CTRL+ALT+DELETE                     { quit; }
   MOD+O                               repeat=false { toggle-overview; }
