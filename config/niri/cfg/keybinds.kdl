@@ -93,6 +93,8 @@ binds {
 
   MOD+TAB                             { focus-workspace-previous; }
 
+  MOD+R                               { switch-preset-column-width; }
+  MOD+SHIFT+R                         { switch-preset-column-width-back; }
   MOD+F                               { maximize-window-to-edges; }
   MOD+C                               { center-column; }
   MOD+CTRL+C                          { center-visible-columns; }
