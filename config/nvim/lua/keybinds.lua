@@ -96,3 +96,15 @@ vim.keymap.set("n", "<leader>q", function()
       vim.cmd.copen()
    end
 end)
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup("LspKeymaps", { clear = true }),
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    local bufnr = args.buf
+
+    vim.keymap.set("n", "gd",    vim.lsp.buf.definition,     { buffer = bufnr})
+    vim.keymap.set("n", "gD",    vim.lsp.buf.declaration,    { buffer = bufnr})
+ end
+
+})
