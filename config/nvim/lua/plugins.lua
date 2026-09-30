@@ -36,6 +36,7 @@ require("conform").setup {
    format_on_save = true,
    formatters_by_ft = {
       lua = { "stylua" },
+      c = { "clang-format" }
    },
 }
 

@@ -8,7 +8,7 @@ vim.lsp.enable {
    "pyright",
    "rust_analyzer",
    "gopls",
-   "ccls",
+   "clangd",
    "gdscript",
    "nil_ls",
    "org",
