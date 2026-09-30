@@ -27,6 +27,9 @@ binds {
   MOD+CTRL+K                          { move-window-up; }
   MOD+CTRL+J                          { move-window-down; }
 
+  MOD+ALT+K                          { move-workspace-up; }
+  MOD+ALT+J                          { move-workspace-down; }
+
   Mod+BracketLeft                     { consume-or-expel-window-left; }
   Mod+BracketRight                    { consume-or-expel-window-right; }
 
