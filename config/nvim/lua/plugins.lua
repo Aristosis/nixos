@@ -22,10 +22,6 @@ require("mini.splitjoin").setup()
 require("gitsigns").setup()
 
 local fzf = require("fzf-lua")
-fzf.setup {
-   fzf_opts = { ["--color"] = "bg:-1,bg+:-1,gutter:-1" },
-}
-
 vim.keymap.set("n", "<leader><leader>", fzf.files)
 vim.keymap.set("n", "<leader>f", fzf.live_grep)
 vim.keymap.set("n", "<leader>b", fzf.buffers)
