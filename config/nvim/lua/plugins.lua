@@ -6,7 +6,6 @@ vim.pack.add {
    { src = "https://github.com/nvim-mini/mini.nvim" },
    { src = "https://github.com/neovim/nvim-lspconfig" },
    { src = "https://github.com/lewis6991/gitsigns.nvim" },
-   { src = "https://github.com/obsidian-nvim/obsidian.nvim", version = vim.version.range("*") },
    { src = "https://github.com/ibhagwan/fzf-lua" },
    { src = "https://github.com/3rd/image.nvim" },
    { src = "https://github.com/sainnhe/gruvbox-material" },
@@ -55,22 +54,6 @@ end)
 
 vim.keymap.set("n", "<leader>_", function()
    oil.toggle_float(vim.fn.getcwd(), { preview = {} })
-end)
-
-vim.schedule(function()
-   require("obsidian").setup {
-      legacy_commands = false,
-      ui = {
-         enable = false,
-      },
-      workspaces = {
-         {
-            name = "ari",
-            path = "/home/ari/media/hdd/documents/ari",
-         },
-      },
-   }
-   vim.keymap.set("n", "<leader>o", vim.cmd.Obsidian)
 end)
 
 vim.g.gruvbox_material_transparent_background = 1
