@@ -5,7 +5,7 @@
 {
   imports = [
     ./cli
-    ./dconf.nix
+    ./theming
     ./librewolf.nix
     ./pavucontrol-helvum.nix
     ./syncthing.nix
