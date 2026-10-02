@@ -8,7 +8,8 @@ vim.pack.add {
    { src = "https://github.com/lewis6991/gitsigns.nvim" },
    { src = "https://github.com/obsidian-nvim/obsidian.nvim", version = vim.version.range("*") },
    { src = "https://github.com/ibhagwan/fzf-lua" },
-   { src = "https://github.com/3rd/image.nvim" }
+   { src = "https://github.com/3rd/image.nvim" },
+   { src = "https://github.com/sainnhe/gruvbox-material" },
 }
 
 require("image").setup()
@@ -74,3 +75,5 @@ vim.schedule(function()
 
 end)
 
+vim.g.gruvbox_material_transparent_background = 1
+vim.cmd.colorscheme("gruvbox-material")
