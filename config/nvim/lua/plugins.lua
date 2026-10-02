@@ -37,7 +37,7 @@ require("conform").setup {
    format_on_save = true,
    formatters_by_ft = {
       lua = { "stylua" },
-      c = { "clang-format" }
+      c = { "clang-format" },
    },
 }
 
@@ -46,7 +46,7 @@ oil.setup {
    default_file_explorer = true,
    skip_confirm_for_simple_edits = true,
    float = { border = "single", max_width = 0.8, max_height = 0.8 },
-   preview_win = { win_options = { number = true } }
+   preview_win = { win_options = { number = true } },
 }
 
 vim.keymap.set("n", "<leader>-", function()
@@ -56,7 +56,6 @@ end)
 vim.keymap.set("n", "<leader>_", function()
    oil.toggle_float(vim.fn.getcwd(), { preview = {} })
 end)
-
 
 vim.schedule(function()
    require("obsidian").setup {
@@ -72,7 +71,6 @@ vim.schedule(function()
       },
    }
    vim.keymap.set("n", "<leader>o", vim.cmd.Obsidian)
-
 end)
 
 vim.g.gruvbox_material_transparent_background = 1
