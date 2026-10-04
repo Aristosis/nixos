@@ -73,11 +73,24 @@ vim.o.lazyredraw = true
 vim.opt.shortmess:append { W = true, I = true, c = true }
 vim.opt.path:append { "**" }
 
-local augroup = vim.api.nvim_create_augroup("misc", {})
+local AG_misc = vim.api.nvim_create_augroup("misc", {})
+local AG_FiletypeOpts = vim.api.nvim_create_augroup("FiletypeOpts", {})
+
 vim.api.nvim_create_autocmd("TextYankPost", {
-   group = augroup,
+   group = AG_misc,
    callback = function()
       (vim.hl or vim.highlight).on_yank()
    end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+   pattern = "markdown",
+   group = AG_FiletypeOpts,
+   callback = function()
+      vim.o.wrap = true
+      vim.o.linebreak = true
+      vim.o.spell = true
+      vim.keymap.set("n", "j", "gj")
+      vim.keymap.set("n", "k", "gk")
+   end,
+})
