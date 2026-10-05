@@ -10,8 +10,7 @@
     ./pavucontrol-helvum.nix
     ./syncthing.nix
     ./obsidian.nix
-    ./games/prism-launcher.nix
-    ./games/umu-launcher.nix
+    ./games
   ];
   programs = {
     nix-ld = {
