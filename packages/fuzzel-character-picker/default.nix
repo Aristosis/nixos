@@ -12,26 +12,26 @@ writeShellApplication {
     wtype
   ];
   text = ''
-case "''${1:-}" in
-  emoji)
-    characters=${./emojis}
-    ;;
-  unicode)
-    characters=${./unicode-characters}
-    ;;
-  nerd-icons)
-    characters=${./nf-icons}
-    ;;
-  *)
-    echo "usage: fuzzel-emojis {emoji|unicode|nerd-icons}" >&2
-    exit 1
-    ;;
-esac
+    case "''${1:-}" in
+      emoji)
+        characters=${./emojis}
+        ;;
+      unicode)
+        characters=${./unicode-characters}
+        ;;
+      nerd-icons)
+        characters=${./nf-icons}
+        ;;
+      *)
+        echo "usage: fuzzel-emojis {emoji|unicode|nerd-icons}" >&2
+        exit 1
+        ;;
+    esac
 
-selected=$(cat "$characters" | fuzzel -d -l 20)
+    selected=$(cat "$characters" | fuzzel -d -l 20)
 
-if [ -n "$selected" ]; then
-  wtype "$(echo "$selected" | cut -d ' ' -f1)"
-fi
+    if [ -n "$selected" ]; then
+      wtype "$(echo "$selected" | cut -d ' ' -f1)"
+    fi
   '';
 }
