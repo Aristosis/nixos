@@ -26,6 +26,7 @@
       directory = "/home/ari";
       clobberFiles = true;
       xdg.config.files = {
+        "gtk-3.0".source = "${config}/gtk-3.0";
         "niri".source = "${config}/niri";
         "mako".source = "${config}/mako";
         "waybar".source = "${config}/waybar";
