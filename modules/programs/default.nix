@@ -10,6 +10,8 @@
     ./pavucontrol-helvum.nix
     ./syncthing.nix
     ./obsidian.nix
+    ./obs.nix
+    ./mpv.nix
     ./games
   ];
   programs = {
