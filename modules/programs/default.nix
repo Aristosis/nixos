@@ -12,6 +12,7 @@
     ./obsidian.nix
     ./obs.nix
     ./mpv.nix
+    ./deadbeef.nix
     ./games
   ];
   programs = {
