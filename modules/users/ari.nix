@@ -32,6 +32,7 @@
         "foot".source = "${config}/foot";
         "fuzzel".source = "${config}/fuzzel";
         "nvim".source = "/home/ari/media/projects/nixos/config/nvim";
+        "deadbeef".source = "/home/ari/media/projects/nixos/config/deadbeef";
         "user-dirs.dirs".text = ''
           XDG_DESKTOP_DIR="media/hdd/desktop"
           XDG_DOCUMENTS_DIR="media/hdd/documents"
