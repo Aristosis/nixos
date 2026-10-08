@@ -13,6 +13,7 @@
     ./obs.nix
     ./mpv.nix
     ./deadbeef.nix
+    ./kdenlive.nix
     ./games
   ];
   programs = {
