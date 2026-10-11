@@ -4,10 +4,16 @@ include "./cfg/input.kdl"
 include "./cfg/keybinds.kdl"
 include "./cfg/rules.kdl"
 
+prefer-no-csd
 screenshot-path "~/media/hdd/pictures/screenshots/"
 
 
+// OUTPUTS
 output "HDMI-A-3" {
+  mode "1920x1080@100"
+}
+
+output "HDMI-A-2" {
   mode "1920x1080@100"
 }
 
@@ -33,5 +39,3 @@ environment {
   GBM_BACKEND "nvidia-drm"
 }
 
-
-prefer-no-csd

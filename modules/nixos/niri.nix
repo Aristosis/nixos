@@ -5,7 +5,10 @@
 }:
 {
   programs = {
-    niri.enable = true;
+    niri = {
+      enable = true;
+      package = localPkgs.niri;
+    };
     waybar.enable = true;
   };
 
