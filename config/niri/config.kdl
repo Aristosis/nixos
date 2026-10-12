@@ -7,7 +7,6 @@ include "./cfg/rules.kdl"
 prefer-no-csd
 screenshot-path "~/media/hdd/pictures/screenshots/"
 
-
 // OUTPUTS
 output "HDMI-A-3" {
   mode "1920x1080@100"
