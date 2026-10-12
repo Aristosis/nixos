@@ -23,6 +23,11 @@
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
+  fileSystems."/" = {
+    device = "/dev/disk/by-label/NIXROOT";
+    fsType = "xfs";
+  };
+
   fileSystems."/boot" = {
     device = "/dev/disk/by-label/NIXBOOT";
     fsType = "vfat";
@@ -32,19 +37,11 @@
     ];
   };
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/NIXROOT";
-    fsType = "xfs";
-  };
-
   fileSystems."/home/ari/media/hdd" = {
     device = "/dev/disk/by-label/HDD";
     fsType = "ext4";
     options = [ "defaults" "nofail" "uid=1000" "gid=100" "dmask=027" "fmask=137" ];
   };
-
-
-  swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
