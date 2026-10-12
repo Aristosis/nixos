@@ -28,7 +28,6 @@
       xdg.config.files = {
         "gtk-3.0".source = "${config}/gtk-3.0";
         "gtk-4.0".source = "${config}/gtk-4.0";
-        "niri".source = "${config}/niri";
         "mako".source = "${config}/mako";
         "waybar".source = "${config}/waybar";
         "foot".source = "${config}/foot";

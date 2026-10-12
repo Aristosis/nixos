@@ -5,11 +5,11 @@
 }:
 {
   programs = {
+    waybar.enable = true;
     niri = {
       enable = true;
-      package = localPkgs.niri;
+      package = localPkgs.niri-wrapped;
     };
-    waybar.enable = true;
   };
 
   hjem.users.ari.packages = with pkgs; [
