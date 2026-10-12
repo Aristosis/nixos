@@ -23,11 +23,6 @@
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/NIXROOT";
-    fsType = "xfs";
-  };
-
   fileSystems."/boot" = {
     device = "/dev/disk/by-label/NIXBOOT";
     fsType = "vfat";
@@ -37,10 +32,17 @@
     ];
   };
 
-  fileSystems."/home/ari/media/hdd" = {
-    device = "/dev/disk/by-uuid/31899a88-d872-492b-9fa1-281a2a8c12a9";
-    fsType = "ext4";
+  fileSystems."/" = {
+    device = "/dev/disk/by-label/NIXROOT";
+    fsType = "xfs";
   };
+
+  fileSystems."/home/ari/media/hdd" = {
+    device = "/dev/disk/by-label/HDD";
+    fsType = "ext4";
+    options = [ "defaults" "nofail" "uid=1000" "gid=100" "dmask=027" "fmask=137" ];
+  };
+
 
   swapDevices = [ ];
 
