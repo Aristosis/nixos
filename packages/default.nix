@@ -10,5 +10,6 @@ rec {
   fuzzel-character-picker = pkgs.callPackage ./fuzzel-character-picker { inherit fuzzel-wrapped; };
   niri-wrapped = pkgs.callPackage ./niri { };
   mako-wrapped = pkgs.callPackage ./mako { };
-  waybar-wrapped = pkgs.callPackage ./waybar { };
+  waybar-wrapped = pkgs.callPackage ./waybar { inherit pkgs; };
+  zsh-wrapped = pkgs.callPackage ./zsh { };
 }

@@ -5,7 +5,10 @@
 }:
 {
   programs = {
-    waybar.enable = true;
+    waybar = {
+      package = localPkgs.waybar-wrapped;
+      enable = true;
+    };
     niri = {
       enable = true;
       package = localPkgs.niri-wrapped;
@@ -16,7 +19,7 @@
     localPkgs.fuzzel-character-picker
     localPkgs.kitty-wrapped
     localPkgs.fuzzel-wrapped
-    mako
+    localPkgs.mako-wrapped
     awww
     wl-clipboard
     cliphist

@@ -2,6 +2,7 @@
   waybar,
   makeWrapper,
   symlinkJoin,
+  ... # trust me you need this.
 }:
 symlinkJoin {
   name = "waybar-wrapped";
