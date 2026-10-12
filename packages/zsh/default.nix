@@ -7,8 +7,7 @@
   writeTextDir,
 }:
 let
-  zdotdir = writeTextDir "config/.zshrc"
-  ''
+  zdotdir = writeTextDir "config/.zshrc" ''
     ${builtins.readFile ./zshrc}
     source ${zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source ${zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
@@ -20,7 +19,7 @@ symlinkJoin {
   nativeBuildInputs = [ makeWrapper ];
   postBuild = ''
     wrapProgram $out/bin/zsh \
-      --set ZDOTDIR "${zdotdir}"
+      --set ZDOTDIR "${zdotdir}/config"
   '';
   meta.mainProgram = "zsh";
 }
